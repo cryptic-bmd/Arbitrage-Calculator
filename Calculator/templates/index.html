@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block title %}
+    Arbitrage Calculator
+{% endblock %}
+
+{% block head %}
+    <meta name="title" content="Arbitrage Calculator." />
+    <meta name="description" content="Arbitrage Calculator to help you identify surebets" />
+{% endblock %}
+
+{% block content %}
+    <div>
+        <div class="upperArbitrageCalculator" id="upperDiv">
+            <div class="topHeader"></div>
+
+            <div>
+                <div class="singleBet">
+                    <div class="betInput">
+                        <div class="betInputInner">
+                            <p>Bet 1</p>
+                            <input type="number" class="inputBox" placeholder="Please Enter Bet 1 Odds" />
+                        </div>
+                    </div>
+                    <div class="calculationsDiv">
+                        <p>Bet 1 stake:</p>
+                        <p class="calculatedValue stake"></p>
+                    </div>
+                    <div class="calculationsDiv">
+                        <p>Bet 1 payout:</p>
+                        <p class="calculatedValue colorChange payout"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="singleBet">
+                    <div class="betInput">
+                        <div class="betInputInner">
+                            <p>Bet 2</p>
+                            <input type="number" class="inputBox" placeholder="Please Enter Bet 2 Odds" />
+                        </div>
+                    </div>
+                    <div class="calculationsDiv">
+                        <p>Bet 2 stake:</p>
+                        <p class="calculatedValue stake"></p>
+                    </div>
+                    <div class="calculationsDiv">
+                        <p>Bet 2 payout:</p>
+                        <p class="calculatedValue colorChange payout"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="singleBet insertBefore">
+                <div class="betInput">
+                    <div class="betInputInner">
+                        <p>Stake</p>
+                        <input type="number" id="stake-input" placeholder="Please Enter Stake" />
+                    </div>
+                </div>
+                <p class="calculatedValue1 stakeP" style="background-color: rgb(255, 255, 255)"></p>
+                <p class="calculatedValue1 stakeP" style="background-color: rgb(255, 255, 255)"></p>
+            </div>
+
+            <div class="lowerArbitrageCalculator">
+                <div class="controls">
+                    <button class="button" id="moreBetBtn">
+                        <!-- <i class="fa-solid fa-circle-plus"></i> -->
+                        MORE BETS
+                    </button>
+                    <button class="button" id="resetBtn">
+                        <!-- <ion-icon name="repeat-outline"></ion-icon> -->
+                        RESET
+                    </button>
+                    <!-- <button><i class="fa-solid fa-calculator"></i>CALCULATE</button> -->
+                </div>
+                <div class="finalCalculation">
+                    <div class="finalCalcDiv">
+                        Total Payout: 
+                        <span class="colorChange" id="totalPayout">₦‎0.00</span>
+                    </div>
+                    <div class="finalCalcDiv">
+                        Total Profit: 
+                        <span class="colorChange" id="totalProfit">₦‎0.00</span>
+                    </div>
+                    <div class="finalCalcDiv">
+                        ROI:
+                        <span class="colorChange" id="roi">0.00%</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,263 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700&display=swap");
+
+:root {
+    --header-height: 3rem;
+
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(0, 0%, 53%);
+    --first-color-alt: hsl(0, 0%, 47%);
+    --first-color-light: hsl(0, 0%, 59%);
+    --first-color-lighten: hsl(0, 0%, 97%);
+    --second-color: hsl(25, 83%, 53%);
+    --third-color: hsla(0, 0%, 0%, 0.8);
+    --title-color: hsl(0, 0%, 28%);
+    --text-color: hsl(0, 0%, 0%);
+    --text-color-light: hsl(0, 0%, 75%);
+    --border-color: hsl(0, 0%, 98%);
+    --border-color-alt: hsl(0, 0%, 95%);
+    --body-color: #fff;
+    --container-color: #fff;
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Tektur', cursive, sans-serif;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 0.9rem;
+    --h2-font-size: 0.78rem;
+    --h3-font-size: 0.62rem;
+    --normal-font-size: 0.625rem;
+    --small-font-size: 0.50rem;
+    --smaller-font-size: 0.46rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*========== Shadow ==========*/
+    --shadow-1: 0 6px 15px 0 hsla(0, 0%, 0%, 0.05);
+    --shadow-2: 0 10px 30px hsla(0, 0%, 0%, 0.06);
+    --shadow-3: 0 0 #000000, 0 0 #000000, 0px 10px 50px hsla(0, 0%, 0%, 0.2);
+
+    /*========== Radius ==========*/
+
+    --radius-pill: 500px;
+    --radius-circle: 50%;
+    --radius-3: 3px;
+    --radius-5: 5px;
+    --radius-6: 6px;
+    --radius-10: 10px;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+img,
+span,
+data,
+input,
+button,
+ion-icon {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+}
+
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    margin-inline: auto;
+}
+
+input[type='text'],
+input[type='number'],
+input {
+    width: 90%;
+    margin-inline: auto;
+    font-size: 1rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+ion-icon {
+    pointer-events: none;
+}
+
+address {
+    font-style: normal;
+}
+
+html {
+    font-family: var(--body-font);
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bocy-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+/*-----------------------------------*\
+  #REUSED STYLES
+\*-----------------------------------*/
+
+.colorChange {
+    color: var(--third-color);
+}
+
+.button {
+    display: flex;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 28px;
+    margin: 10px;
+    border-radius: var(--radius-6);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+    box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.25);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.button:is(:focus, :hover) {
+    transform: scale(1.1, 1.1);
+}
+
+/*-----------------------------------*\
+  #CONTENT
+\*-----------------------------------*/
+
+.header {
+    margin-block-start: var(--header-height);
+    text-align: center;
+}
+
+.header p {
+    vertical-align: middle;
+}
+
+.header i {
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+.upperArbitrageCalculator {
+    width: 85%;
+    max-width: 500px;
+    padding: 25px;
+    margin-block: 25px;
+    margin-inline: auto;
+    /* border-radius: var(--radius-5); */
+    box-shadow: var(--shadow-3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    transition: all 0.25s ease;
+}
+
+.singleBet {
+    margin-block: 10px;
+    transition: all 0.25s ease;
+}
+
+.betInput input, 
+.singleBet input {
+    border: 1px solid #000000;
+    border-radius: var(--radius-6);
+    outline: none;
+    padding: 7px 10px;
+}
+
+.betInput p {
+    font-weight: var(--font-bold);
+}
+/* .betInputInner {
+    transition: .5s;
+} */
+
+
+.calculationsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    margin: 5px;
+    line-height: 1.4rem;
+}
+
+.calculatedValue {
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 0.05rem;
+}
+
+.lowerArbitrageCalculator .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 10px;
+}
+
+.controls #moreBetBtn {
+    background: none;
+    border: 1px solid #000000;
+    box-shadow: none;
+    color: #000000;
+}
+
+.finalCalculation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4rem;
+}
+
+.finalCalculation .finalCalcDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.finalCalculation .finalCalcDiv span {
+    font-weight: var(--font-bold);
+    letter-spacing: 0.05rem;
+}

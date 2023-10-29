@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- primary meta tag -->
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="title" content="Arbitrage Calculator" />
+        <meta name="description" content="Arbitrage Calculator" />
+
+        <!-- favicon -->
+        <!-- <link rel="shortcut icon" type="image/png" href="./favicon.png" /> -->
+
+        <!-- custom css link -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+        <!-- box-icon -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- preload images -->
+        <!-- <link rel="preload" as="image" href="./assets/images/hero-bg.png" /> -->
+
+        {% block head %}{% endblock %}
+    </head>
+
+    <body id="top">
+        <!-- #HEADER -->
+        <header class="header" id="header" data-header>
+            <h1 class="title">
+                Arbitrage Calculator
+            </h1>
+            <p>By cryptic_bmd <i class='bx bx-football'></i></p>
+        </header>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <!-- custom js link -->
+        <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+        <!-- ionicon link -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!-- box-icon link -->
+        <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+    </body>
+</html>
