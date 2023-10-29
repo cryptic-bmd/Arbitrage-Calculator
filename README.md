@@ -1,7 +1,7 @@
 # Arbitrage Calculator
 
 <p align="center">
-    <img src = "assets/screenshot.png" width="450px">
+    <img src = "Calculator/assets/screenshot.png" width="450px">
 </p>
 
 This is a very simple Flask app designed to perform basic arbitrage calculations. Users input odds, and the app determines whether there is an arbitrage opportunity available. These opportunities arise when different sports bookmakers offer varying odds for the same sporting event.
